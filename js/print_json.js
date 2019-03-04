@@ -7,15 +7,15 @@ Cti.adv_diploma_it = {
 
     priv.content_tmpl = `
       <tr>
-        <td>%id%</td>
-        <td>%code%</td>
-        <td>%name%</td>
+        <td class="unit-id">%id%</td>
+        <td class="unit-code">%code%</td>
+        <td class="unit-name">%name%</td>
       </tr>
     `;
     priv.sub_content_tmpl = `
       <tr>
-        <td>%id%</td>
-        <td>%name%</td>
+        <td class="%type%-id">%id%</td>
+        <td class="%type%-name">%name%</td>
       </tr>
     `;
     priv.table_tmpl = `
@@ -1157,7 +1157,7 @@ Cti.adv_diploma_it = {
 
       for(var idx in subLessons) {
         var subLessonIdStr = unitId+ '.'+idx;
-        var content = priv.sub_content_tmpl.replace('%id%', subLessonIdStr).replace('%name%', subLessons[idx].text)
+        var content = priv.sub_content_tmpl.replace('%id%', subLessonIdStr).replace('%name%', subLessons[idx].text).replace(/%type%/g, 'sub-lesson');
         $('#sub_lessons--' + subLessonId+ ' > tbody').append(content);
       }
     };
@@ -1173,7 +1173,7 @@ Cti.adv_diploma_it = {
       for(var idx in lessons) {
         // var lessonId = parseInt(idx);
         var lessonIdStr = unitId+ '.'+idx;
-        var content = priv.sub_content_tmpl.replace('%id%', lessonIdStr).replace('%name%', lessons[idx].name)
+        var content = priv.sub_content_tmpl.replace('%id%', lessonIdStr).replace('%name%', lessons[idx].name).replace(/%type%/g, 'lesson');
         $('#lessons--' + unitId+ ' > tbody').append(content);
 
         priv.set_sub_lessons(lessons[idx].pc, unitId, idx);

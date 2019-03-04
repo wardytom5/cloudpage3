@@ -76,3 +76,15 @@ table.even {
 table.odd {
   background: #f7f7f7;
 }
+
+.unit-id, .unit-code, .unit-name {
+  font-size: 18px;
+}
+
+.lesson-id, .lesson-name {
+  font-size: 16px;
+}
+
+.sub-lesson-id, .sub-lesson-name {
+  font-size: 14px;
+}
