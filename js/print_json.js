@@ -20,11 +20,7 @@ Cti.adv_diploma_it = {
     `;
     priv.table_tmpl = `
       <td colspan="3">
-        <table id="%type%--%id">
-          <thead>
-            <th>#</th>
-            <th>Name</th>
-          </thead>
+        <table id="%type%--%id%" class="%number%">
           <tbody></tbody>
         </table>
       </td>
@@ -1153,29 +1149,34 @@ Cti.adv_diploma_it = {
       $('#course-name').text(pub.data.name + ' (' + pub.data.code + ')');
     };
 
-    priv.set_sub_lessons = function(sub_lessons, unitId, lessonId) {
-      var table = priv.table_tmpl.replace('%type%', 'sub_lessons').replace('%id', lessonId);
-      $('#lessons--' + unitId+ 'tbody').append('<tr></tr>');
-      $('#lessons--' + unitId+ 'tr').last().append(table);
+    priv.set_sub_lessons = function(subLessons, unitId, lessonId) {
+      var subLessonId = unitId + '-' + lessonId;
+      var table = priv.table_tmpl.replace('%type%', 'sub_lessons').replace('%id%', subLessonId).replace('%number%', priv.even_or_odd(unitId));
+      $('#lessons--' + unitId+ ' > tbody').append('<tr></tr>');
+      $('#lessons--' + unitId+ ' tr').last().append(table);
 
-      for(var idx in sub_lessons) {
-        var sub_lessons_id = (idx+1);
-        var content = priv.sub_content_tmpl.replace('%id%', sub_lessons_id).replace('%name%', sub_lessons[idx].text)
-        $('#sub_lessons--' + lessonId+ 'tbody').append(content);
+      for(var idx in subLessons) {
+        var subLessonIdStr = unitId+ '.'+idx;
+        var content = priv.sub_content_tmpl.replace('%id%', subLessonIdStr).replace('%name%', subLessons[idx].text)
+        $('#sub_lessons--' + subLessonId+ ' > tbody').append(content);
       }
     };
 
-    priv.set_unit_lessons = function(lessons, unitId) {
-      var table = priv.table_tmpl.replace('%type%', 'lessons').replace('%id', unitId);
-      $('#units tbody').append('<tr></tr>');
-      $('#units tbody tr').last().append(table);
-      for(var idx in lessons) {
-        var lessonId = (idx+1);
-        var lessonIdStr = unitId+ '.'+(idx+1);
-        var content = priv.sub_content_tmpl.replace('%id%', lessonIdStr).replace('%name%', lessons[idx].name)
-        $('#lessons--' + unitId+ 'tbody').append(content);
+    priv.even_or_odd = function(number) {
+      return (parseInt(number)%2 == 0) ? "even" : "odd";
+    };
 
-        // priv.set_sub_lessons(lessons[idx].pc, unitId, lessonId);
+    priv.set_unit_lessons = function(lessons, unitId) {
+      var table = priv.table_tmpl.replace('%type%', 'lessons').replace('%id%', unitId).replace('%number%', priv.even_or_odd(unitId));
+      $('#units > tbody').append('<tr></tr>');
+      $('#units > tbody tr').last().append(table);
+      for(var idx in lessons) {
+        // var lessonId = parseInt(idx);
+        var lessonIdStr = unitId+ '.'+idx;
+        var content = priv.sub_content_tmpl.replace('%id%', lessonIdStr).replace('%name%', lessons[idx].name)
+        $('#lessons--' + unitId+ ' > tbody').append(content);
+
+        priv.set_sub_lessons(lessons[idx].pc, unitId, idx);
       }
     };
 
@@ -1184,8 +1185,8 @@ Cti.adv_diploma_it = {
         var unitId = parseInt(idx)+1;
         var content = priv.content_tmpl.replace('%id%', unitId).replace('%code%', pub.data.units[idx].code).replace('%name%', pub.data.units[idx].name)
 
-        $('#units tbody').append(content)
-        // priv.set_unit_lessons(pub.data.units[idx].EPC, unitId);
+        $('#units > tbody').append(content)
+        priv.set_unit_lessons(pub.data.units[idx].EPC, unitId);
       }
     };
 

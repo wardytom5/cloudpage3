@@ -57,6 +57,22 @@ ol#units strong {
 }
 
 table {
+  background: #fff;
   border: 1px solid #000;
   width: 100%;
+}
+
+table th {
+  text-align: left;
+}
+
+table#units > tbody table {
+  border: 0 none;
+}
+
+table.even {
+  background: #f3f3f3;
+}
+table.odd {
+  background: #f7f7f7;
 }
