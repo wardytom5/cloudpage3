@@ -4,6 +4,26 @@
 		"selected_items":
 		[
 			[
+				"unit",
+				"unitId"
+			],
+			[
+				"sub",
+				"sub_lessons_id"
+			],
+			[
+				"lesson",
+				"lesson_id"
+			],
+			[
+				"less",
+				"lessonId"
+			],
+			[
+				"uni",
+				"unitId"
+			],
+			[
 				"availa",
 				"availability"
 			],
@@ -50,10 +70,6 @@
 			[
 				"user",
 				"user_person"
-			],
-			[
-				"sub",
-				"suburb"
 			],
 			[
 				"profile",
@@ -131,6 +147,41 @@
 	},
 	"buffers":
 	[
+		{
+			"file": "print_json.html",
+			"settings":
+			{
+				"buffer_size": 1896,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/print_json.js",
+			"settings":
+			{
+				"buffer_size": 56448,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/normalize.css",
+			"settings":
+			{
+				"buffer_size": 6138,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "css/website.css",
+			"settings":
+			{
+				"buffer_size": 1095,
+				"encoding": "UTF-8",
+				"line_ending": "Unix"
+			}
+		}
 	],
 	"build_system": "",
 	"build_system_choices":
@@ -224,10 +275,17 @@
 	},
 	"expanded_folders":
 	[
-		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website"
+		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website",
+		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/css",
+		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/js",
+		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/js/vendor"
 	],
 	"file_history":
 	[
+		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/css/website.css",
+		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/js/print_json.js",
+		"/home/ffscalco/.gitconfig",
+		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/js/reading_json.js",
 		"/home/ffscalco/Documents/dev/Rails/vyans/spec/models/job_offer_spec.rb",
 		"/home/ffscalco/Documents/dev/Rails/vyans/app/models/job.rb",
 		"/home/ffscalco/Documents/dev/Rails/vyans/spec/support/factory_bot.rb",
@@ -290,7 +348,6 @@
 		"/home/ffscalco/.ssh/config",
 		"/home/ffscalco/Documents/dev/Rails/vyans/db/schema.rb",
 		"/home/ffscalco/Documents/dev/Rails/vyans/.circleci/config.yml",
-		"/home/ffscalco/.gitconfig",
 		"/home/ffscalco/Documents/dev/Rails/vyans/app/models/purchase.rb",
 		"/home/ffscalco/Documents/dev/Rails/vyans/spec/support/helper_methods.rb",
 		"/home/ffscalco/Documents/dev/Rails/vyans/db/views/workers/20190123045053_workers.sql",
@@ -352,10 +409,7 @@
 		"/home/ffscalco/Documents/dev/Rails/vyans/spec/factories/enrolments.rb",
 		"/home/ffscalco/Documents/dev/Rails/vyans/app/models/enrolment.rb",
 		"/home/ffscalco/Documents/dev/Rails/vyans/spec/factories/emergency_contacts.rb",
-		"/home/ffscalco/Documents/dev/Rails/vyans/app/views/invoices/show.html.slim",
-		"/home/ffscalco/Documents/dev/Rails/vyans/app/views/settings/_form.html.slim",
-		"/home/ffscalco/Documents/dev/Rails/vyans/Gemfile.lock",
-		"/home/ffscalco/Documents/dev/Rails/vyans/.git/MERGE_MSG"
+		"/home/ffscalco/Documents/dev/Rails/vyans/app/views/invoices/show.html.slim"
 	],
 	"find":
 	{
@@ -373,6 +427,10 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"sub_lessons_id",
+			"table_tmpl",
+			"var",
+			"lesson_id"
 		],
 		"highlight": true,
 		"in_selection": false,
@@ -390,8 +448,134 @@
 	"groups":
 	[
 		{
+			"selected": 3,
 			"sheets":
 			[
+				{
+					"buffer": 0,
+					"file": "print_json.html",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1896,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1039,
+								1039
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/HTML/HTML.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 3,
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "js/print_json.js",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 56448,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								54722,
+								54722
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 652.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 2,
+					"type": "text"
+				},
+				{
+					"buffer": 2,
+					"file": "css/normalize.css",
+					"semi_transient": true,
+					"settings":
+					{
+						"buffer_size": 6138,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 324.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/website.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 1095,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								1095,
+								1095
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"syntax": "Packages/CSS/CSS.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1350.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				}
 			]
 		}
 	],
