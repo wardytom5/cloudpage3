@@ -1,0 +1,72 @@
+body {
+  background: #f3f3f3;
+}
+
+
+h1, h2 {
+  text-align: center;
+}
+
+.units {
+  border: 1px solid #000;
+  cursor: pointer;
+  min-height: 100px;
+}
+
+#left {
+  float: left;
+  width: 48%;
+  margin-left: 10px;
+}
+
+#right {
+  width: 48%;
+  float: right;
+  margin-right: 10px;
+}
+
+.units h2, .units h3 {
+  margin: 0;
+}
+
+.units .unit {
+  /*margin-bottom: 10px;*/
+  /*padding: 5px;*/
+}
+
+.units .sub-unit {
+  /*border: 1px solid blue;*/
+  /*margin-bottom: 10px;*/
+  /*padding: 5px;*/
+}
+.units .sub-unit:last-child {
+  /*margin-bottom: 0;*/
+}
+
+.lesson {
+  border: 1px solid blue;
+  padding: 5px;
+  margin: 5px;
+}
+
+.clearfix:after {
+   content: " "; /* Older browser do not support empty content */
+   visibility: hidden;
+   display: block;
+   height: 0;
+   clear: both;
+}
+
+#createBox {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+}
+
+.dragula-container {
+  margin-bottom: 10px;
+}
+
+.dragula-container h3 {
+  text-align: center;
+}

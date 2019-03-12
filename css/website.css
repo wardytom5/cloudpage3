@@ -3,7 +3,7 @@ body {
 }
 
 
-h1 {
+h1, h2 {
   text-align: center;
 }
 
@@ -51,40 +51,43 @@ h1 {
 
 .hide { display: none; }
 
-ol li { cursor: pointer; }
-ol#units strong {
-  font-size: 13px;
-}
-
-table {
-  background: #fff;
+.units {
   border: 1px solid #000;
-  width: 100%;
+  cursor: pointer;
+  width: 48%;
+  min-height: 100px;
 }
 
-table th {
-  text-align: left;
+.units.left {
+  float: left;
+  margin-left: 10px;
 }
 
-table#units > tbody table {
-  border: 0 none;
+.units.right {
+  float: right;
+  margin-right: 10px;
 }
 
-table.even {
-  background: #f3f3f3;
-}
-table.odd {
-  background: #f7f7f7;
+.units h2, .units h3 {
+  margin: 0;
 }
 
-.unit-id, .unit-code, .unit-name {
-  font-size: 18px;
+.units .unit {
+  /*margin-bottom: 10px;*/
+  /*padding: 5px;*/
 }
 
-.lesson-id, .lesson-name {
-  font-size: 16px;
+.units .sub-unit {
+  /*border: 1px solid blue;*/
+  /*margin-bottom: 10px;*/
+  /*padding: 5px;*/
+}
+.units .sub-unit:last-child {
+  /*margin-bottom: 0;*/
 }
 
-.sub-lesson-id, .sub-lesson-name {
-  font-size: 14px;
+.lesson {
+  border: 1px solid blue;
+  padding: 5px;
+  margin: 5px;
 }
