@@ -4,6 +4,22 @@
 		"selected_items":
 		[
 			[
+				"new",
+				"newId"
+			],
+			[
+				"e",
+				"ensure"
+			],
+			[
+				"wid",
+				"width\tproperty"
+			],
+			[
+				"uni",
+				"unitLessonId"
+			],
+			[
 				"unit",
 				"unitId"
 			],
@@ -18,10 +34,6 @@
 			[
 				"less",
 				"lessonId"
-			],
-			[
-				"uni",
-				"unitId"
 			],
 			[
 				"availa",
@@ -148,36 +160,45 @@
 	"buffers":
 	[
 		{
-			"file": "print_json.html",
+			"file": "classes.html",
 			"settings":
 			{
-				"buffer_size": 1896,
+				"buffer_size": 1541,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "js/print_json.js",
+			"file": "css/dragula.min.css",
 			"settings":
 			{
-				"buffer_size": 56448,
+				"buffer_size": 466,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "js/classes.js",
+			"settings":
+			{
+				"buffer_size": 54127,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/normalize.css",
+			"file": "css/classes.css",
 			"settings":
 			{
-				"buffer_size": 6138,
+				"buffer_size": 920,
+				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
 		},
 		{
-			"file": "css/website.css",
+			"file": "js/new_ICT60115.json",
 			"settings":
 			{
-				"buffer_size": 1095,
+				"buffer_size": 44975,
 				"encoding": "UTF-8",
 				"line_ending": "Unix"
 			}
@@ -194,6 +215,18 @@
 		"last_filter": "",
 		"selected_items":
 		[
+			[
+				"prett",
+				"Pretty JSON: Format and Sort JSON"
+			],
+			[
+				"inst",
+				"Package Control: Install Package"
+			],
+			[
+				"insta",
+				"Package Control: Install Package"
+			],
 			[
 				"rena",
 				"Rename File"
@@ -217,10 +250,6 @@
 			[
 				"renam",
 				"Rename File"
-			],
-			[
-				"insta",
-				"Package Control: Install Package"
 			],
 			[
 				"set tuby s",
@@ -277,12 +306,13 @@
 	[
 		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website",
 		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/css",
-		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/js",
-		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/js/vendor"
+		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/js"
 	],
 	"file_history":
 	[
 		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/css/website.css",
+		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/js/ICT60115.json",
+		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/print_json.html",
 		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/js/print_json.js",
 		"/home/ffscalco/.gitconfig",
 		"/home/ffscalco/Documents/dev/Ad. Diploma IT/cloud/website/js/reading_json.js",
@@ -407,9 +437,7 @@
 		"/home/ffscalco/Documents/dev/Rails/vyans/spec/factories/invoices.rb",
 		"/home/ffscalco/Documents/dev/Rails/vyans/spec/factories/purchases.rb",
 		"/home/ffscalco/Documents/dev/Rails/vyans/spec/factories/enrolments.rb",
-		"/home/ffscalco/Documents/dev/Rails/vyans/app/models/enrolment.rb",
-		"/home/ffscalco/Documents/dev/Rails/vyans/spec/factories/emergency_contacts.rb",
-		"/home/ffscalco/Documents/dev/Rails/vyans/app/views/invoices/show.html.slim"
+		"/home/ffscalco/Documents/dev/Rails/vyans/app/models/enrolment.rb"
 	],
 	"find":
 	{
@@ -427,6 +455,53 @@
 		"case_sensitive": false,
 		"find_history":
 		[
+			"main",
+			"left",
+			".units.",
+			"draggable-element",
+			"#units",
+			"left",
+			"#units",
+			"unit_tmpl",
+			"text",
+			"\"6\":",
+			"\"5\":",
+			"\"2.6\":",
+			"\"2.5\":",
+			"\"3.5\":",
+			"\"3.4\":",
+			"\"4\":",
+			"\"3\":",
+			"\"2\":",
+			"\"1\":",
+			"\"1.5\":",
+			"\"1.4\":",
+			"\"1.3\":",
+			"\"1.2\":",
+			"\"1.1\":",
+			"\"6.3\":",
+			"\"6.2\":",
+			"\"6.1\":",
+			"\"5.4\":",
+			"\"5.3\":",
+			"\"5.2\":",
+			"\"5.1\":",
+			"\"4.5\":",
+			"\"4.4\":",
+			"\"4.3\":",
+			"\"4.2\":",
+			"\"4.1\":",
+			"\"3.3\":",
+			"\"3.2\":",
+			"\"3.1\":",
+			"\"2.4\":",
+			"\"2.3\":",
+			"\n        },",
+			"\"2.3\"",
+			"\"2.3\":",
+			"\"2.2\":",
+			"\"2.1\":",
+			"ict605",
 			"sub_lessons_id",
 			"table_tmpl",
 			"var",
@@ -448,24 +523,24 @@
 	"groups":
 	[
 		{
-			"selected": 3,
+			"selected": 2,
 			"sheets":
 			[
 				{
 					"buffer": 0,
-					"file": "print_json.html",
+					"file": "classes.html",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1896,
+						"buffer_size": 1541,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1039,
-								1039
+								1091,
+								1091
 							]
 						],
 						"settings":
@@ -477,50 +552,19 @@
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 324.0,
-						"zoom_level": 1.0
-					},
-					"stack_index": 3,
-					"type": "text"
-				},
-				{
-					"buffer": 1,
-					"file": "js/print_json.js",
-					"semi_transient": false,
-					"settings":
-					{
-						"buffer_size": 56448,
-						"regions":
-						{
-						},
-						"selection":
-						[
-							[
-								54722,
-								54722
-							]
-						],
-						"settings":
-						{
-							"git_gutter_is_enabled": true,
-							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
-						},
-						"translation.x": 0.0,
-						"translation.y": 652.0,
+						"translation.y": 432.0,
 						"zoom_level": 1.0
 					},
 					"stack_index": 2,
 					"type": "text"
 				},
 				{
-					"buffer": 2,
-					"file": "css/normalize.css",
+					"buffer": 1,
+					"file": "css/dragula.min.css",
 					"semi_transient": true,
 					"settings":
 					{
-						"buffer_size": 6138,
+						"buffer_size": 466,
 						"regions":
 						{
 						},
@@ -534,46 +578,109 @@
 						"settings":
 						{
 							"git_gutter_is_enabled": true,
-							"syntax": "Packages/CSS/CSS.sublime-syntax",
-							"tab_size": 2,
-							"translate_tabs_to_spaces": true
+							"syntax": "Packages/CSS/CSS.sublime-syntax"
 						},
 						"translation.x": 0.0,
-						"translation.y": 324.0,
+						"translation.y": 0.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 1,
+					"stack_index": 3,
 					"type": "text"
 				},
 				{
-					"buffer": 3,
-					"file": "css/website.css",
+					"buffer": 2,
+					"file": "js/classes.js",
 					"semi_transient": false,
 					"settings":
 					{
-						"buffer_size": 1095,
+						"buffer_size": 54127,
 						"regions":
 						{
 						},
 						"selection":
 						[
 							[
-								1095,
-								1095
+								53777,
+								53777
 							]
 						],
 						"settings":
 						{
 							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JavaScript.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 864.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 0,
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "css/classes.css",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 920,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								868,
+								868
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
 							"syntax": "Packages/CSS/CSS.sublime-syntax",
 							"tab_size": 2,
 							"translate_tabs_to_spaces": true
 						},
 						"translation.x": 0.0,
-						"translation.y": 1350.0,
+						"translation.y": 756.0,
 						"zoom_level": 1.0
 					},
-					"stack_index": 0,
+					"stack_index": 1,
+					"type": "text"
+				},
+				{
+					"buffer": 4,
+					"file": "js/new_ICT60115.json",
+					"semi_transient": false,
+					"settings":
+					{
+						"buffer_size": 44975,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3525,
+								3525
+							]
+						],
+						"settings":
+						{
+							"git_gutter_is_enabled": true,
+							"open_with_edit": true,
+							"syntax": "Packages/JavaScript/JSON.sublime-syntax",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"stack_index": 4,
 					"type": "text"
 				}
 			]
@@ -1158,7 +1265,7 @@
 		[
 			[
 				"",
-				"~/Documents/dev/Rails/friends_resilience/portal_admin/portal_admin.sublime-project"
+				"~/Documents/dev/Rails/vyans/vyans.sublime-project"
 			]
 		],
 		"width": 380.0

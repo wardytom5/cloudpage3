@@ -1,0 +1,30 @@
+body {
+  background: #f3f3f3;
+}
+
+
+h1, h2 {
+  text-align: center;
+}
+
+#content {
+  padding-top: 0;
+}
+
+ul {
+  padding: 0;
+  margin: 0;
+}
+ul li {
+  list-style: none;
+}
+
+.tags {
+  margin-bottom: 24px;
+}
+.tags h4 {
+  margin: 0;
+  display: inline-block;
+  top: 2px;
+  position: relative;
+}

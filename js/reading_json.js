@@ -1155,9 +1155,9 @@ Cti.adv_diploma_it = {
       priv.set_course_details();
       priv.set_course_units();
 
-      $('#units li').on('click', function() {
-        $(this).find('ul').first().slideToggle('slow');
-      });
+      // $('#units li').on('click', function() {
+      //   $(this).find('ul').first().slideToggle('slow');
+      // });
     };
 
     return pub;

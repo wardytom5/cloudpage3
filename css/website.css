@@ -91,3 +91,15 @@ h1, h2 {
   padding: 5px;
   margin: 5px;
 }
+
+.unit-id, .unit-code, .unit-name {
+  font-size: 22px;
+}
+
+.lesson-id, .lesson-name {
+  font-size: 18px;
+}
+
+.sub-lesson-id, .sub-lesson-id {
+  font-size: 16px;
+}

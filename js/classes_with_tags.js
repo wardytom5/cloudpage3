@@ -1,29 +1,41 @@
 if (window.Cti === undefined) window.Cti = {};
 
 Cti.adv_diploma_it = {
-  reading_json: function() {
+  classes: function() {
     var priv = {};
     var pub = {};
 
-    priv.content_tmpl = `
-      <tr>
-        <td class="unit-id">%id%</td>
-        <td class="unit-code">%code%</td>
-        <td class="unit-name">%name%</td>
-      </tr>
+    priv.unitTmpl = `
+      <div class="row">
+        <div class="col-md-12">
+          <div class="card unit" id="%unitId%">
+            <div class="card-head card-head-sm style-primary-dark">
+              <header>
+                 %unitId%) %unitName% (%unitCode%)
+              </header>
+            </div>
+            <div class="card-body subUnit">
+              <div class="tags">
+                <h4>Tags: </h4>
+                <select multiple="true" data-role="tagsinput" />
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
     `;
-    priv.sub_content_tmpl = `
-      <tr>
-        <td class="%type%-id">%id%</td>
-        <td class="%type%-name">%name%</td>
-      </tr>
-    `;
-    priv.table_tmpl = `
-      <td colspan="3">
-        <table id="%type%--%id%" class="%number%">
-          <tbody></tbody>
-        </table>
-      </td>
+
+    priv.subUnitTmpl = `
+      <div class="card card-underline">
+        <div class="card-head card-head-xs style-primary">
+          <header>%subUnitId%) %subUnitName%</header>
+        </div>
+        <div class="card-body">
+          <ul>
+
+          </ul>
+        </div>
+      </div>
     `;
 
     priv.get_json = function() {
@@ -1149,43 +1161,29 @@ Cti.adv_diploma_it = {
       $('#course-name').text(pub.data.name + ' (' + pub.data.code + ')');
     };
 
-    priv.set_sub_lessons = function(subLessons, unitId, lessonId) {
-      var subLessonId = unitId + '-' + lessonId;
-      var table = priv.table_tmpl.replace('%type%', 'sub_lessons').replace('%id%', subLessonId).replace('%number%', priv.even_or_odd(unitId));
-      $('#lessons--' + unitId+ ' > tbody').append('<tr></tr>');
-      $('#lessons--' + unitId+ ' tr').last().append(table);
-
+    priv.set_unit_sub_lessons = function(subLessons, unitId){
       for(var idx in subLessons) {
-        var subLessonIdStr = unitId+ '.'+idx;
-        var content = priv.sub_content_tmpl.replace('%id%', subLessonIdStr).replace('%name%', subLessons[idx].text).replace(/%type%/g, 'sub-lesson');
-        $('#sub_lessons--' + subLessonId+ ' > tbody').append(content);
+        var newContent = `<li>${idx}) ${subLessons[idx].text}</li>`;
+
+        $('#'+unitId + ' ul').append(newContent);
       }
-    };
+    }
 
-    priv.even_or_odd = function(number) {
-      return (parseInt(number)%2 == 0) ? "even" : "odd";
-    };
+    priv.set_unit_lessons = function(unitLessons, unitId) {
+      for(var idx in unitLessons) {
+        var subContent = priv.subUnitTmpl.replace('%subUnitName%', unitLessons[idx].name).replace('%subUnitId%', idx)
 
-    priv.set_unit_lessons = function(lessons, unitId) {
-      var table = priv.table_tmpl.replace('%type%', 'lessons').replace('%id%', unitId).replace('%number%', priv.even_or_odd(unitId));
-      $('#units > tbody').append('<tr></tr>');
-      $('#units > tbody tr').last().append(table);
-      for(var idx in lessons) {
-        // var lessonId = parseInt(idx);
-        var lessonIdStr = unitId+ '.'+idx;
-        var content = priv.sub_content_tmpl.replace('%id%', lessonIdStr).replace('%name%', lessons[idx].name).replace(/%type%/g, 'lesson');
-        $('#lessons--' + unitId+ ' > tbody').append(content);
-
-        priv.set_sub_lessons(lessons[idx].pc, unitId, idx);
+        $('#'+unitId + ' .subUnit').append(subContent);
+        priv.set_unit_sub_lessons(unitLessons[idx].pc, unitId);
       }
-    };
+    }
 
     priv.set_course_units = function() {
       for(var idx in pub.data.units) {
         var unitId = parseInt(idx)+1;
-        var content = priv.content_tmpl.replace('%id%', unitId).replace('%code%', pub.data.units[idx].code).replace('%name%', pub.data.units[idx].name)
+        var content = priv.unitTmpl.replace(/%unitId%/g, unitId).replace('%unitCode%', pub.data.units[idx].code).replace('%unitName%', pub.data.units[idx].name);
+        $('section').append(content);
 
-        $('#units > tbody').append(content)
         priv.set_unit_lessons(pub.data.units[idx].EPC, unitId);
       }
     };
@@ -1200,4 +1198,4 @@ Cti.adv_diploma_it = {
   }()
 };
 
-Cti.adv_diploma_it.reading_json.start();
+Cti.adv_diploma_it.classes.start();
