@@ -19,6 +19,11 @@ ul li {
   list-style: none;
 }
 
+img.logo {
+  display: block;
+  margin: 10px auto 0 auto;
+}
+
 .tags {
   margin-bottom: 24px;
 }

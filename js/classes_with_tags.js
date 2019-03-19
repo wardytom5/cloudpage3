@@ -1192,6 +1192,10 @@ Cti.adv_diploma_it = {
       priv.get_json();
       priv.set_course_details();
       priv.set_course_units();
+
+      setTimeout(function() {
+        $('input').on('keydown', function(e){if (e.keyCode == 9)  e.preventDefault() });
+      }, 400);
     };
 
     return pub;
