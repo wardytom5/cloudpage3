@@ -1184,6 +1184,12 @@ Cti.adv_diploma_it = {
         var content = priv.unitTmpl.replace(/%unitId%/g, unitId).replace('%unitCode%', pub.data.units[idx].code).replace('%unitName%', pub.data.units[idx].name);
         $('section').append(content);
 
+        if (pub.data.units[idx].tags != undefined) {
+          for(var tagId in pub.data.units[idx].tags) {
+            $('select').last().append(new Option("", pub.data.units[idx].tags[tagId]));
+          }
+        }
+
         priv.set_unit_lessons(pub.data.units[idx].EPC, unitId);
       }
     };
@@ -1233,16 +1239,33 @@ Cti.adv_diploma_it = {
       });
     };
 
+    priv.uploadJson = function() {
+      $('.uploadJson').on('click', function() {
+        $('section').remove();
+        $('.loading.section').show();
+        $('#UploadModal').modal('hide');
+        $('<section></section>').insertAfter('.loading.section');
+
+        setTimeout(function() {
+          $('.loading.section').hide();
+          pub.data = JSON.parse($('#inputJson').val());
+          $('#inputJson').val("");
+          priv.loadData();
+          $("input[data-role=tagsinput], select[multiple][data-role=tagsinput]").tagsinput();
+        }, 1000);
+      });
+    }
+
     pub.start = function() {
       priv.get_json();
       priv.loadData();
-
 
       setTimeout(function() {
         $('input').on('keydown', function(e){if (e.keyCode == 9)  e.preventDefault() });
       }, 400);
 
       priv.saveJson();
+      priv.uploadJson();
     };
 
     return pub;

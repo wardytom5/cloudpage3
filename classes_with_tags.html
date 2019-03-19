@@ -34,6 +34,7 @@
     <img src="img/logo-lg-black.png" class="logo" alt="Canterbury Technical Institute">
     <h1 id="course-name"></h1>
     <h2>Units</h2>
+    <img src="img/loading.gif" class="loading section" style="display: none;">
     <section>
     </section>
     <button type="button" title="Save JSON" data-toggle="modal" data-target="#SaveModal" class="btn save-json ink-reaction btn-floating-action btn-primary"><i class="md md-save"></i></button>
@@ -49,11 +50,11 @@
           <h4 class="modal-title" id="simpleModalLabel">Upload your JSON file</h4>
         </div>
         <div class="modal-body">
-          <textarea id="uploadJson" rows="10"></textarea>
+          <textarea id="inputJson" rows="10"></textarea>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary">Upload</button>
+          <button type="button" class="btn btn-primary uploadJson">Upload</button>
         </div>
       </div>
     </div>
