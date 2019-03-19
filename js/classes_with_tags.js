@@ -11,7 +11,7 @@ Cti.adv_diploma_it = {
           <div class="card unit" id="%unitId%">
             <div class="card-head card-head-sm style-primary-dark">
               <header>
-                 %unitId%) %unitName% (%unitCode%)
+                 %unitId%) <span class="unitName">%unitName%</span> (<span class="unitCode">%unitCode%</span>)
               </header>
             </div>
             <div class="card-body subUnit">
@@ -26,9 +26,9 @@ Cti.adv_diploma_it = {
     `;
 
     priv.subUnitTmpl = `
-      <div class="card card-underline">
+      <div class="card card-underline subUnitCard">
         <div class="card-head card-head-xs style-primary">
-          <header>%subUnitId%) %subUnitName%</header>
+          <header><span class="subUnitId">%subUnitId%</span>) <span class="subUnitName">%subUnitName%</span></header>
         </div>
         <div class="card-body">
           <ul>
@@ -1158,14 +1158,14 @@ Cti.adv_diploma_it = {
     };
 
     priv.set_course_details = function() {
-      $('#course-name').text(pub.data.name + ' (' + pub.data.code + ')');
+      $('#course-name').html('<span class="course-name">' + pub.data.name + '</span> (<span class="course-code">' + pub.data.code + '</span>)');
     };
 
     priv.set_unit_sub_lessons = function(subLessons, unitId){
       for(var idx in subLessons) {
-        var newContent = `<li>${idx}) ${subLessons[idx].text}</li>`;
+        var newContent = `<li><span class="subLessonId">${idx}</span>) <span class="subLessonName">${subLessons[idx].text}</span></li>`;
 
-        $('#'+unitId + ' ul').append(newContent);
+        $('#'+unitId + ' ul').last().append(newContent);
       }
     }
 
@@ -1188,14 +1188,61 @@ Cti.adv_diploma_it = {
       }
     };
 
-    pub.start = function() {
-      priv.get_json();
+    priv.loadData = function() {
       priv.set_course_details();
       priv.set_course_units();
+    };
+
+    priv.saveJson = function() {
+      $('.save-json').on('click', function() {
+        $('#SaveModal .loading').show();
+        $('#SaveModal .modal-body pre').remove();
+
+        var newJson = {};
+        newJson.name = $('.course-name').text();
+        newJson.code = $('.course-code').text();
+        newJson.units = [];
+
+        $('.unit').each(function() {
+          var unit = {};
+          unit.name = $(this).find('.unitName').text();
+          unit.code = $(this).find('.unitCode').text();
+          unit.tags = $(this).find('select').val();
+          unit.EPC = {};
+
+          $(this).find('.subUnitCard').each(function(){
+            var subUnitId = $(this).find('.subUnitId').text();
+            unit.EPC[subUnitId] = {};
+            unit.EPC[subUnitId].name = $(this).find('.subUnitName').text();
+            unit.EPC[subUnitId].pc = {};
+
+            $(this).find('ul li').each(function() {
+              var lessonId = $(this).find('.subLessonId').text();
+              unit.EPC[subUnitId].pc[lessonId] = {};
+              unit.EPC[subUnitId].pc[lessonId].text = $(this).find('.subLessonName').text();
+            });
+          });
+
+          newJson.units.push(unit);
+        });
+
+        setTimeout(function() {
+          $('#SaveModal .loading').hide();
+          $('#SaveModal .modal-body').append('<pre>' + JSON.stringify(newJson, null, 2) + '</pre>');
+        }, 1000);
+      });
+    };
+
+    pub.start = function() {
+      priv.get_json();
+      priv.loadData();
+
 
       setTimeout(function() {
         $('input').on('keydown', function(e){if (e.keyCode == 9)  e.preventDefault() });
       }, 400);
+
+      priv.saveJson();
     };
 
     return pub;
