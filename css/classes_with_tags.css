@@ -33,3 +33,15 @@ img.logo {
   top: 2px;
   position: relative;
 }
+
+.save-json {
+  position: fixed;
+  right: 24px;
+  bottom: 24px;
+}
+
+.upload-json {
+  position: fixed;
+  right: 72px;
+  bottom: 24px;
+}
