@@ -1197,6 +1197,8 @@ Cti.adv_diploma_it = {
     priv.loadData = function() {
       priv.set_course_details();
       priv.set_course_units();
+
+      priv.preventTab();
     };
 
     priv.saveJson = function() {
@@ -1256,13 +1258,15 @@ Cti.adv_diploma_it = {
       });
     }
 
-    pub.start = function() {
-      priv.get_json();
-      priv.loadData();
-
+    priv.preventTab = function() {
       setTimeout(function() {
         $('input').on('keydown', function(e){if (e.keyCode == 9)  e.preventDefault() });
       }, 400);
+    };
+
+    pub.start = function() {
+      priv.get_json();
+      priv.loadData();
 
       priv.saveJson();
       priv.uploadJson();
