@@ -1,37 +1,82 @@
-## Welcome to GitHub Pages
+<!doctype html>
+<html class="no-js" lang="">
 
-You can use the [editor on GitHub](https://github.com/wardytom5/cloudpage3/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+<head>
+  <meta charset="utf-8">
+  <title>Main page</title>
+  <meta name="description" content="">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+  <link rel="manifest" href="site.webmanifest">
+  <link rel="apple-touch-icon" href="icon.png">
+  <!-- Place favicon.ico in the root directory -->
 
-### Markdown
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/main.css">
+  <link rel="stylesheet" href="css/website.css">
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+  <meta name="theme-color" content="#fafafa">
+</head>
 
-```markdown
-Syntax highlighted code block
+<body>
+  <!--[if lte IE 9]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+  <![endif]-->
 
-# Header 1
-## Header 2
-### Header 3
+  <!-- Add your site or application content here -->
+  <h1>ICTPRG604 Create cloud computing services</h1>
+  <div class="container">
+    <h2 style="color: #1F4788">Explaining some HTML tags</h2>
+    <br>
+    <p>This is the <strong>p</strong> tag. Commonly used for paragraphs</p>
+    <p>The <strong>a</strong> tag is used for hyperlinks <a href="https://google.com.au" target="_blank">like this</a></p>
+    <div id="span">
+      <p>The <strong>span</strong> tag is used to group inline-elements in a document.</p>
+      <p><span>You can</span> <span>have as many</span> <strong>span</strong> <span>as you want</span></p>
+    </div>
+    <ul>
+      <li>The tag <strong>ul</strong> is</li>
+      <li>an unordered</li>
+      <li>list</li>
+    </ul>
+    <ol>
+      <li>The tag <strong>ol</strong> is</li>
+      <li>an ordered</li>
+      <li>list</li>
+    </ol>
+    <div>
+      <p>This is an embed video from youtube using an iframe</p>
+      <iframe width="100%" height="400" src="https://www.youtube.com/embed/UB1O30fR-EE" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    </div>
+    <div class="images">
+      <p>You can show images using the <strong>img</strong> tag.</p>
+      <p>It's possible to use an image from your local path</p>
+      <img src="img/html.png" alt="">
+      <p>Or use a link to an external image</p>
+      <img src="https://udemy-images.udemy.com/course/750x422/1017116_c55a.jpg" alt="">
+    </div>
+    <pre>
+      This is the <strong>pre</strong> tag.
+      It's used for preformatted text
+    </pre>
+    <div class="about">
+      <a class="btn" href="about.html">About the author</a>
+    </div>
+  </div>
+  <script src="js/vendor/modernizr-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.3.1.min.js" integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=" crossorigin="anonymous"></script>
+  <script>window.jQuery || document.write('<script src="js/vendor/jquery-3.3.1.min.js"><\/script>')</script>
+  <script src="js/plugins.js"></script>
+  <script src="js/main.js"></script>
 
-- Bulleted
-- List
+  <!-- Google Analytics: change UA-XXXXX-Y to be your site's ID. -->
+  <script>
+    window.ga = function () { ga.q.push(arguments) }; ga.q = []; ga.l = +new Date;
+    ga('create', 'UA-XXXXX-Y', 'auto'); ga('send', 'pageview')
+  </script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/js/bootstrap.min.js"></script>
+  <script src="https://www.google-analytics.com/analytics.js" async defer></script>
+</body>
 
-1. Numbered
-2. List
-
-**Bold** and _Italic_ and `Code` text
-
-[Link](url) and ![Image](src)
-```
-
-For more details see [GitHub Flavored Markdown](https://guides.github.com/features/mastering-markdown/).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/wardytom5/cloudpage3/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+</html>
